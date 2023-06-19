@@ -18,9 +18,9 @@ function App() {
         <h1 id="user-title"> User Profile: </h1>
 
         <div class="user-data">
-          <h5>Name: {user.name} </h5>
-          <h5>Age: {user.age} </h5>
-          <h5>Goal: {user.goal} </h5>
+          <h5> <span class="text-label"> Name: </span> {user.name} </h5>
+          <h5> <span class="text-label"> Age: </span> {user.age} </h5>
+          <h5> <span class="text-label"> Goal: </span> {user.goal} </h5>
         </div>
       </div>
     </>

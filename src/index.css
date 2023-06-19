@@ -84,3 +84,9 @@ button:focus-visible {
   font-family: 'Times New Roman', Times, serif;
   color:aliceblue
 }
+
+.text-label {
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  color:aqua
+}
