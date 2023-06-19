@@ -15,6 +15,7 @@ function App() {
   return (
     <>
       <div class="user-profile">
+        <h1 id="title"> User Profile: </h1>
         <h5>Name: {user.name} </h5>
         <h5>Age: {user.age} </h5>
         <h5>Goal: {user.goal} </h5>
