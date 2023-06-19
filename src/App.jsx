@@ -78,14 +78,9 @@ function App() {
         {items.map((item) => {
           return (
             <div>
-              <li key={item.id} onClick={() => setShowEdit(item.id)}>
+              <li className="text-label" key={item.id} onClick={() => setShowEdit(item.id)}>
                 {item.value}
-                <button
-                  className="delete-button"
-                  onClick={() => deleteItem(item.id)}
-                >
-                  ❌
-                </button>
+                <button className="delete-button" onClick={() => deleteItem(item.id)}> Delete </button>
               </li>
 
               {showEdit == item.id ? (
