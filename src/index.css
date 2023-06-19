@@ -97,3 +97,11 @@ button:focus-visible {
   width: 75px;
   text-align: center;
 }
+
+#addBtn {
+  margin-bottom: -20px;
+  margin-left: 2px;
+  width: 65px;
+  height: 37px;
+  text-align: center;
+}

@@ -63,15 +63,10 @@ function App() {
       <h1>My Todo List</h1>
 
       {/* 2. Add new item (input) */}
-      <input
-        type="text"
-        placeholder="Add an item..."
-        value={newItem}
-        onChange={(e) => setNewItem(e.target.value)}
-      />
+      <input type="text" placeholder="Add an item..." value={newItem} onChange={(e) => setNewItem(e.target.value)} />
 
       {/* Add (button) */}
-      <button onClick={() => addItem()}>Add</button>
+      <button id="addBtn" onClick={() => addItem()}>Add</button>
 
       {/* 3. List of todos (unordered list) */}
       <ul>
