@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   // State Hook - `useState`
@@ -13,7 +15,6 @@ function App() {
 
   /* Adds a new item to the list array*/
   function addItem() {
-    // ! Check for empty item
     if (!newItem) {
       alert("Press enter an item.");
       return;
@@ -59,16 +60,17 @@ function App() {
   // Main part of app
   return (
     <div className="app">
-      {/* 1. Header  */}
-      <h1>My Todo List</h1>
+      {/* Header  */}
+      <Header/>
 
-      {/* 2. Add new item (input) */}
+
+      {/* Add new item (input) */}
       <input type="text" placeholder="Add an item..." value={newItem} onChange={(e) => setNewItem(e.target.value)} />
 
       {/* Add (button) */}
       <button id="addBtn" onClick={() => addItem()}>Add</button>
 
-      {/* 3. List of todos (unordered list) */}
+      {/* List of todos (unordered list) */}
       <ul>
         {items.map((item) => {
           return (
@@ -94,6 +96,10 @@ function App() {
           );
         })}
       </ul>
+
+      {/* Footer  */}
+      <footer> <Footer/> </footer>
+      
     </div>
   );
 }
