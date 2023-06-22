@@ -30,27 +30,34 @@ const Content = () => {
 
     /* Deletes an item based on the `item.id` key */
     function deleteItem(id) {
-    const newArray = items.filter((item) => item.id !== id);
-    setItems(newArray);
+        const newArray = items.filter((item) => item.id !== id);
+        setItems(newArray);
     }
 
     /* Edit an item text after creating it. */
     function editItem(id, newText) {
-    // Get the current item
-    const currentItem = items.filter((item) => item.id === id);
+        // Get the current item
+        const currentItem = items.filter((item) => item.id === id);
 
-    // Create a new item with same id
-    const newItem = {
-        id: currentItem.id,
-        value: newText,
-    };
+        // Create a new item with same id
+        const newItem = {
+            id: currentItem.id,
+            value: newText,
+        };
 
-    deleteItem(id);
+        deleteItem(id);
 
-    // Replace item in the item list
-    setItems((oldList) => [...oldList, newItem]);
-    setUpdatedText("");
-    setShowEdit(-1);
+        // Replace item in the item list
+        setItems((oldList) => [...oldList, newItem]);
+        setUpdatedText("");
+        setShowEdit(-1);
+    }
+
+    // Add item when entery key is press
+    function handleKeyPress(event) {
+        if (event.key === "Enter") {
+          addItem();
+        }
     }
 
     // Main content UI component
@@ -62,12 +69,11 @@ const Content = () => {
           placeholder="Add an item..."
           value={newItem}
           onChange={(e) => setNewItem(e.target.value)}
+          onKeyPress={handleKeyPress}
         />
   
         {/* Add (button) */}
-        <button id="addBtn" onClick={() => addItem()}>
-          Add
-        </button>
+        <button id="addBtn" onClick={() => addItem()}> Add </button>
   
         {/* List of todos (unordered list) */}
         <ul>
