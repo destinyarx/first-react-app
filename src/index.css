@@ -17,6 +17,24 @@ li {
   margin: 12px 0;
 }
 
+footer {
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+header {
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+}
+
+.content {
+  margin-top: 12mm;
+}
+
 .delete-button {
   font-size: 10px;
   margin-left: 8px;

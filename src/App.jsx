@@ -11,7 +11,7 @@ function App() {
       {/* Header  */}
       <Header/>
 
-      <Content/>
+      <div class="content"> <Content/> </div>
 
       {/* Footer  */}
       <Footer/> 
